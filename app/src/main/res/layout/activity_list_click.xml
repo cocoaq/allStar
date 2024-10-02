@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_deep"
+    tools:context=".ListClick">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/deep_main"
+        android:ems="10"
+        android:maxLines="3"
+        android:padding="3dp"
+        android:text="title"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/listBackBtn"
+        app:layout_constraintTop_toBottomOf="@+id/listBackBtn"
+        tools:minLines="1" />
+
+    <TextView
+        android:id="@+id/listDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="3dp"
+        android:text="date"
+        app:layout_constraintStart_toStartOf="@+id/listTitle"
+        app:layout_constraintTop_toBottomOf="@+id/listTitle" />
+
+    <TextView
+        android:id="@+id/listId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        android:text="id"
+        app:layout_constraintBottom_toBottomOf="@+id/listDate"
+        app:layout_constraintStart_toEndOf="@+id/listDate"
+        app:layout_constraintTop_toTopOf="@+id/listDate" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDate">
+
+        <TextView
+            android:id="@+id/listContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/main_color"
+            android:ellipsize="end"
+            android:ems="20"
+            android:gravity="top"
+            android:lines="20"
+            android:maxLines="20"
+            android:padding="5dp"
+            android:text="content"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/listBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/deep_deep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <Button
+        android:id="@+id/edBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toStartOf="@+id/edBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
